@@ -1,0 +1,21 @@
+<div mat-dialog-title>
+    <h1> Employee Form </h1>
+</div>
+<form   (ngSubmit)="submitForm()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput type="text" [(ngModel)]="formData.name" placeholder="Ex. Mayank" name="name">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput [(ngModel)]="formData.email" type="text" placeholder="Ex. Shingare" name="email">
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="formbutt">
+        <button mat-raised-button color="warn" type="button" [mat-dialog-close]="false">Cancle</button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+    </div>
+</form>
